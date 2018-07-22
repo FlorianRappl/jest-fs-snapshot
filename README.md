@@ -21,7 +21,7 @@ yarn add jest-fs-snapshot
 
 ## Getting Started
 
-1. Extend Jest's `expect`
+1.  Extend Jest's `expect`
 
 ```js
 import {toMatchFilesystemSnapshot} from 'jest-fs-snapshot';
@@ -29,7 +29,7 @@ import {toMatchFilesystemSnapshot} from 'jest-fs-snapshot';
 expect.extend({toMatchFilesystemSnapshot});
 ```
 
-2. Use it in your tests!
+2.  Use it in your tests!
 
 ```js
 test('if build directory matches snapshot', () => {
@@ -42,9 +42,9 @@ test('if build directory matches snapshot', () => {
 
 ### .toMatchFilesystemSnapshot([pathToSnapshot])
 
-__Arguments__
+**Arguments**
 
-1. `pathToSnapshot` _(String)_: An optional full path to a snapshot file.
+1.  `pathToSnapshot` _(String)_: An optional full path to a snapshot file.
 
 ## Credits
 
