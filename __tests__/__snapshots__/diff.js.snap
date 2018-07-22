@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`compareBuffers() should return a diff for emoji files 1`] = `
+"[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- This is a text file 🌈[39m
+[31m+ This is a text file too 🦄[39m
+[2m  [22m"
+`;
+
+exports[`compareBuffers() should return a diff for lorem-ipsum files 1`] = `
+"[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.[22m
+[2m  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.[22m
+[32m- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[39m
+[2m  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.[22m
+[2m  [22m"
+`;

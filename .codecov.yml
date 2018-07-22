@@ -1,0 +1,10 @@
+status:
+  project:
+    enabled: yes
+    target: 100%
+    if_no_uploads: error
+    if_not_found: error
+    if_ci_failed: error
+
+comment:
+  layout: header

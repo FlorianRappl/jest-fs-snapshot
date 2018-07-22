@@ -1,0 +1,10 @@
+parser: babel-eslint
+
+extends: [airbnb-base, plugin:jest/recommended, prettier]
+
+env:
+    browser: false
+
+rules:
+    no-underscore-dangle: off
+    no-plusplus: [error, {allowForLoopAfterthoughts: true}]

@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getDirectoryTree() should read dir from \`diff\` 1`] = `
+Object {
+  "files": Object {
+    "emoji-1.txt": Object {
+      "size": 25,
+    },
+    "emoji-2.txt": Object {
+      "size": 29,
+    },
+    "lorem-ipsum-1.txt": Object {
+      "size": 446,
+    },
+    "lorem-ipsum-2.txt": Object {
+      "size": 343,
+    },
+  },
+}
+`;
+
+exports[`getDirectoryTree() should read dir from \`encodings\` 1`] = `
+Object {
+  "files": Object {
+    "ansi.txt": Object {
+      "size": 314,
+    },
+    "big5.txt": Object {
+      "size": 35,
+    },
+    "big5_B.txt": Object {
+      "size": 940,
+    },
+    "cp936_with-bad-chars.txt": Object {
+      "size": 39196,
+    },
+    "euc_jp.txt": Object {
+      "size": 1284,
+    },
+    "euc_tw.txt": Object {
+      "size": 35,
+    },
+    "euc_tw_B.txt": Object {
+      "size": 306,
+    },
+    "gb.txt": Object {
+      "size": 5,
+    },
+    "gb2.txt": Object {
+      "size": 17,
+    },
+    "kr.txt": Object {
+      "size": 42,
+    },
+    "latin.txt": Object {
+      "size": 201,
+    },
+    "sjis.txt": Object {
+      "size": 1284,
+    },
+    "utf16-be.txt": Object {
+      "size": 100,
+    },
+    "utf16-be_bom.txt": Object {
+      "size": 92,
+    },
+    "utf16-le_bom.txt": Object {
+      "size": 92,
+    },
+    "utf32-le_bom.txt": Object {
+      "size": 184,
+    },
+    "utf32_bom.txt": Object {
+      "size": 184,
+    },
+    "utf8.txt": Object {
+      "size": 102,
+    },
+    "utf8_bom.txt": Object {
+      "size": 105,
+    },
+    "utf8_emojis.txt": Object {
+      "size": 25,
+    },
+    "utf8_not-cp949.txt": Object {
+      "size": 109,
+    },
+    "utf8_shishi.txt": Object {
+      "size": 136,
+    },
+  },
+}
+`;
+
+exports[`getDirectoryTree() should read dir from \`fixture-1\` 1`] = `
+Object {
+  "files": Object {
+    "main.css": Object {
+      "size": 31,
+    },
+    "tmp": Object {
+      "files": Object {
+        "tmp.js": Object {
+          "size": 48,
+        },
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createAsarPackage() should exclude files from \`fixture-1\` 1`] = `
+Object {
+  "files": Object {
+    "main.css": Object {
+      "offset": "0",
+      "size": 31,
+    },
+  },
+}
+`;
+
+exports[`createAsarPackage() should pack files from \`fixture-1\` 1`] = `
+Object {
+  "files": Object {
+    "main.css": Object {
+      "offset": "0",
+      "size": 31,
+    },
+    "tmp": Object {
+      "files": Object {
+        "tmp.js": Object {
+          "offset": "31",
+          "size": 48,
+        },
+      },
+    },
+  },
+}
+`;
