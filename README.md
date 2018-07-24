@@ -6,9 +6,6 @@
 
 -   [Installation](#installation)
 -   [Getting Started](#getting-started)
-    -   [Sync usage](#sync-usage)
-    -   [Server-side rendering](#server-side-rendering)
-    -   [`withPriem` HOC](#withpriem-hoc)
 -   [API](#api)
     -   [`toMatchFilesystemSnapshot`](#tomatchfilesystemsnapshot)
 -   [Credits](#credits)
@@ -38,6 +35,8 @@ test('if build directory matches snapshot', () => {
 });
 ```
 
+This will create a `__fs_snapshots__` folder next to your test file with a snapshot file. On next runs it will chech if the snapshot against the source directory and with throw on mismatches.
+
 ## API
 
 ### .toMatchFilesystemSnapshot([pathToSnapshot])
@@ -48,7 +47,7 @@ test('if build directory matches snapshot', () => {
 
 ## Credits
 
-Many files for `encodings` fixture have been taken from [https://github.com/mbbill/fencview].
+Many files for `encodings` fixture have been taken from https://github.com/mbbill/fencview.
 
 ---
 
