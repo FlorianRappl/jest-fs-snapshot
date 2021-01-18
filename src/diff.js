@@ -74,10 +74,19 @@ export function compareDirectoryToAsar(actualPath, expectedPath, options) {
                     pathToNode = pathToNode.replace(/[/]/g, '\\');
                 }
 
-                const actual = fs.readFileSync(path.resolve(actualPath, pathToNode));
+                const thisPath = path.resolve(actualPath, pathToNode);
+                const actual = fs.readFileSync(thisPath);
                 const expected = asarDisk.readFileSync(asarFilesystem, pathToNode, asarFilesystem.getFile(pathToNode));
 
-                const res = compareBuffers(actual, expected);
+                let compareFunc = compareBuffers;
+
+                if (options.customCompare) {
+                    const match = options.customCompare.filter(({check}) => check(thisPath))[0];
+                    if (match) compareFunc = match.compare || compareFunc;
+                }
+
+                const res = compareFunc(actual, expected);
+
                 if (res !== NO_DIFF_MESSAGE) {
                     const error = new Error(res);
                     error.pathToNode = pathToNode;
