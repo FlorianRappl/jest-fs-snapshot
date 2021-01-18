@@ -35,15 +35,57 @@ test('if build directory matches snapshot', () => {
 });
 ```
 
-This will create a `__fs_snapshots__` folder next to your test file with a snapshot file. On next runs it will chech if the snapshot against the source directory and with throw on mismatches.
+This will create a `__fs_snapshots__` folder next to your test file with a snapshot file. On next runs it will chech if
+the snapshot against the source directory and with throw on mismatches.
 
 ## API
 
-### .toMatchFilesystemSnapshot([pathToSnapshot])
+### .toMatchFilesystemSnapshot([pathToSnapshot, options])
 
 **Arguments**
 
 1.  `pathToSnapshot` _(String)_: An optional full path to a snapshot file.
+1.  `options` _(Object)_: An optional object with additional configurations.
+    1. `customCompare` _({check: Function, compare: Function}[])_: Any custom compare function will be applied only if
+       the check method returns true. If multiple checks return true, the first hit will be used.
+
+**Example**
+
+```js
+const diff = require('jest-diff');
+
+const snapshotOptions = {
+    customCompare: [
+        {
+            check: path => path.endsWith('package.json'),
+            compare: (actualBuffer, expectedBuffer) => {
+                const actual = JSON.parse(actualBuffer);
+                const expected = JSON.parse(expectedBuffer);
+
+                // we want to ignore the peerModules
+                delete actual.peerModules;
+                delete expected.peerModules;
+
+                return diff(actual, expected);
+            },
+        },
+        {
+            // test.js files will be ignored
+            check: path => path.endsWith('.test.js'),
+            compare: () => true,
+        },
+    ],
+};
+
+describe('...', () => {
+    it('...', () => {
+        /**
+         * ...
+         */
+        expect(pathToBuildDir).toMatchFilesystemSnapshot(undefined, snapshotOptions);
+    });
+});
+```
 
 ## Credits
 
