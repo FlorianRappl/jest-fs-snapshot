@@ -21,7 +21,7 @@
   "main": "./dist/jest-fs-snapshot.cjs.js",
   "scripts": {
     "build": "rimraf dist/ && cross-env NODE_ENV=production rollup -c",
-    "test": "jest",
+    "test": "cross-env FORCE_COLOR=1 jest",
     "lint": "eslint \"src/**/*.js\"",
     "prettier": "prettier \"src/**/*.js\" --write --loglevel warn",
     "prepublishOnly": "npm run build && npm run lint && prettier \"src/**/*.js\" -l && npm run test"
