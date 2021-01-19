@@ -1,12 +1,22 @@
 {
   "name": "jest-fs-snapshot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Jest matcher for filesystem snapshotting.",
   "author": "Vlad Zhukov (http://github.com/Vlad-Zhukov)",
+  "contributors": [
+    {
+      "name": "Florian Rappl",
+      "url": "http://github.com/FlorianRappl"
+    },
+    {
+      "name": "Nikita Malyschkin",
+      "url": "http://github.com/nmalyschkin"
+    }
+  ],
   "license": "MIT",
-  "repository": "Vlad-Zhukov/jest-fs-snapshot",
+  "repository": "FlorianRappl/jest-fs-snapshot",
   "bugs": {
-    "url": "https://github.com/Vlad-Zhukov/jest-fs-snapshot/issues"
+    "url": "https://github.com/FlorianRappl/jest-fs-snapshot/issues"
   },
   "main": "./dist/jest-fs-snapshot.cjs.js",
   "scripts": {
@@ -14,7 +24,7 @@
     "test": "jest",
     "lint": "eslint \"**/*.js\"",
     "prettier": "prettier \"**/*.{js,md}\" --write --loglevel warn",
-    "prepublishOnly": "yarn build && yarn lint && prettier \"**/*.{js,md}\" -l && yarn test"
+    "prepublishOnly": "npm run build && npm run lint && prettier \"**/*.{js,md}\" -l && npm run test"
   },
   "dependencies": {
     "asar": "^0.14.3",
@@ -29,7 +39,7 @@
     "@babel/preset-env": "^7.12.11",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.6",
-    "babel-jest": "^23.4.0",
+    "babel-jest": "^26.6.3",
     "cross-env": "^5.2.0",
     "delay": "^3.0.0",
     "eslint": "^5.2.0",
@@ -38,8 +48,8 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jest": "^21.17.0",
     "fs-extra": "^7.0.0",
-    "jest": "^23.4.1",
-    "jest-circus": "^23.4.1",
+    "jest": "^26.6.3",
+    "jest-circus": "^26.6.3",
     "prettier": "^1.13.7",
     "rimraf": "^2.6.2",
     "rollup": "^0.63.4",
