@@ -6,7 +6,7 @@ import {createAsarPackage} from './asar';
 import {compareDirectoryToAsar} from './diff';
 
 // eslint-disable-next-line import/prefer-default-export
-export function matchFilesystemSnapshot({received, expected, context, name}) {
+export function matchFilesystemSnapshot({received, expected, context, name, options}) {
     const {testPath, currentTestName, isNot, snapshotState} = context;
 
     if (isNot) {
@@ -71,6 +71,7 @@ export function matchFilesystemSnapshot({received, expected, context, name}) {
         aAnnotation: 'Snapshot',
         bAnnotation: 'Received',
         expand: snapshotState.expand,
+        customCompare: options.customCompare,
     });
 
     if (!diffMessage) {
