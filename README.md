@@ -1,4 +1,4 @@
-# jest-fs-snapshot · [![npm][1]][2] [![Build Status][3]][4] [![codecov][5]][6]
+# jest-fs-snapshot · [![npm][1]][2] [![Build Status][3]][4]
 
 [Jest](https://jestjs.io) matcher for filesystem snapshotting.
 
@@ -95,10 +95,8 @@ Many files for `encodings` fixture have been taken from https://github.com/mbbil
 
 [1]: https://img.shields.io/npm/v/jest-fs-snapshot.svg
 [2]: https://npm.im/jest-fs-snapshot
-[3]: https://travis-ci.com/vlad-zhukov/jest-fs-snapshot.svg?branch=master
-[4]: https://travis-ci.com/vlad-zhukov/jest-fs-snapshot
-[5]: https://codecov.io/gh/vlad-zhukov/jest-fs-snapshot/branch/master/graph/badge.svg
-[6]: https://codecov.io/gh/vlad-zhukov/jest-fs-snapshot
+[3]: https://florianrappl.visualstudio.com/piral-cli-plugins/_apis/build/status/FlorianRappl.jest-fs-snapshot?branchName=master
+[4]: https://florianrappl.visualstudio.com/piral-cli-plugins/_build/latest?definitionId=29&branchName=master
 
 ## License
 
