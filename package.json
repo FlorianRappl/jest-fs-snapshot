@@ -22,9 +22,9 @@
   "scripts": {
     "build": "rimraf dist/ && cross-env NODE_ENV=production rollup -c",
     "test": "jest",
-    "lint": "eslint \"**/*.js\"",
-    "prettier": "prettier \"**/*.{js,md}\" --write --loglevel warn",
-    "prepublishOnly": "npm run build && npm run lint && prettier \"**/*.{js,md}\" -l && npm run test"
+    "lint": "eslint \"src/**/*.js\"",
+    "prettier": "prettier \"src/**/*.js\" --write --loglevel warn",
+    "prepublishOnly": "npm run build && npm run lint && prettier \"src/**/*.js\" -l && npm run test"
   },
   "dependencies": {
     "asar": "^0.14.3",
