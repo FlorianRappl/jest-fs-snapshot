@@ -27,7 +27,8 @@ steps:
     workingFile: .npmrc
 
 - script: |
-    npm publish --tag beta
+    sed -i -e "s/\(\"version\":\\s\+\"\([0-9]\+\.\?\)\+\)/\1-pre.$BUILD_BUILDNUMBER/" package.json;
+    npm publish --tag next
   displayName: 'Pre-Release if develop'
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'))
 
