@@ -31,7 +31,5 @@ export function createAsarPackage(src, dest, {exclude, ...options} = {}) {
 
     getDirectoryTree(src, {exclude, callback});
 
-    return new Promise((resolve, reject) => {
-        asar.createPackageFromFiles(src, dest, files, metadata, options, err => (err ? reject(err) : resolve()));
-    });
+    return asar.createPackageFromFiles(src, dest, files, metadata, options, err => (err ? reject(err) : resolve()));
 }

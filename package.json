@@ -1,6 +1,6 @@
 {
   "name": "jest-fs-snapshot",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Jest matcher for filesystem snapshotting.",
   "author": "Vlad Zhukov (http://github.com/Vlad-Zhukov)",
   "contributors": [
@@ -14,7 +14,10 @@
     }
   ],
   "license": "MIT",
-  "repository": "FlorianRappl/jest-fs-snapshot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FlorianRappl/jest-fs-snapshot.git"
+  },
   "bugs": {
     "url": "https://github.com/FlorianRappl/jest-fs-snapshot/issues"
   },

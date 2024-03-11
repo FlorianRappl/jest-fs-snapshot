@@ -4,6 +4,14 @@ exports[`createAsarPackage() should exclude files from \`fixture-1\` 1`] = `
 Object {
   "files": Object {
     "main.css": Object {
+      "integrity": Object {
+        "algorithm": "SHA256",
+        "blockSize": 4194304,
+        "blocks": Array [
+          "2db41dca32ed38f84a23d752691a1b31652083cbea93a24b5c2e7bfc937a83b0",
+        ],
+        "hash": "2db41dca32ed38f84a23d752691a1b31652083cbea93a24b5c2e7bfc937a83b0",
+      },
       "offset": "0",
       "size": 31,
     },
@@ -15,12 +23,28 @@ exports[`createAsarPackage() should pack files from \`fixture-1\` 1`] = `
 Object {
   "files": Object {
     "main.css": Object {
+      "integrity": Object {
+        "algorithm": "SHA256",
+        "blockSize": 4194304,
+        "blocks": Array [
+          "2db41dca32ed38f84a23d752691a1b31652083cbea93a24b5c2e7bfc937a83b0",
+        ],
+        "hash": "2db41dca32ed38f84a23d752691a1b31652083cbea93a24b5c2e7bfc937a83b0",
+      },
       "offset": "0",
       "size": 31,
     },
     "tmp": Object {
       "files": Object {
         "tmp.js": Object {
+          "integrity": Object {
+            "algorithm": "SHA256",
+            "blockSize": 4194304,
+            "blocks": Array [
+              "a1620187b66d9ae707828a7b7392cd17deb19d9c6b757e052d96bf7eae83963c",
+            ],
+            "hash": "a1620187b66d9ae707828a7b7392cd17deb19d9c6b757e052d96bf7eae83963c",
+          },
           "offset": "31",
           "size": 48,
         },
