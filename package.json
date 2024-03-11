@@ -27,7 +27,7 @@
     "prepublishOnly": "npm run build && npm run lint && prettier \"src/**/*.js\" -l && npm run test"
   },
   "dependencies": {
-    "asar": "^0.14.3",
+    "asar": "^3.2.0",
     "filenamify": "^2.1.0",
     "iconv-lite": "^0.4.23",
     "jest-diff": "^23.2.0",
